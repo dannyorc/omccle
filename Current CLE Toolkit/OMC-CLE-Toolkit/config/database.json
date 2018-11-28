@@ -1,0 +1,31 @@
+{
+	"entities": [{
+		"name": ">dbEntityName>",
+		"type": "omc_oracle_db",
+		"displayName": ">dbEntityDisplayName>",
+		"timezoneRegion": "UTC",
+		"credentialRefs": ["SQLCreds"],
+		"properties": {
+			"host_name": {
+				"displayName": "host_name",
+				"value": ">dbHostName>"
+			},
+			"port": {
+				"displayName": "port",
+				"value": "1521"
+			},
+			"sid": {
+				"displayName": "sid",
+				"value": "ORCL"
+			},
+			"service_name": {
+     				"displayName": "Service Name",
+    				"value": ">dbServiceName>"
+    			},
+			"capability": {
+				"displayName": "capability",
+				"value": "monitoring"
+			}
+		}
+	}]
+}

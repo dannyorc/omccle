@@ -1,0 +1,73 @@
+{
+   "entities":[
+      {
+         "name":"orcl12c12",
+         "type":"omc_oracle_db",
+         "displayName":"orcl12c12",
+         "timezoneRegion":"PST",
+         "properties":{
+            "host_name":{
+               "displayName":"Host Name",
+               "value":"host.example.com"
+            },
+            "port":{
+               "displayName":"Port",
+               "value":"1521"
+            },
+            "sid":{
+               "displayName":"SID",
+               "value":"orcl12c"
+            },
+            "protocol":{
+               "displayName":"Protocol",
+               "value":"tcp"
+            },
+            "is_cluster":{
+               "displayName":"Is Cluster",
+               "value":"FALSE"
+            },
+            "service_name":{
+               "displayName":"Service Name",
+               "value":"host1.example.com"
+            },
+            "global_name":{
+               "displayName":"Global Name",
+               "value":"host1.example.com"
+            }
+         },
+         "associations":[
+            {
+               "assocType":"omc_contains",
+               "sourceEntityName":"orcl12c12",
+               "sourceEntityType":"omc_oracle_db",
+               "destEntityName":"orcl12c",
+               "destEntityType":"omc_oracle_db_instance"
+            }
+         ]
+      },
+      {
+         "name":"orcl12c",
+         "type":"omc_oracle_db_instance",
+         "displayName":"orcl12c",
+         "timezoneRegion":"PST",
+         "properties":{
+            "host_name":{
+               "displayName":"Host Name",
+               "value":"host.example.com"
+            },
+            "audit_dest":{
+               "displayName":"Audit Dest",
+               "value":"/opt/ORCLemaas/InfrastructureSoftware/oracledb/base/admin/orcl12c/adump"
+            },
+            "instance_name":{
+               "displayName":"Instance Name",
+               "value":"orcl12c"
+            },
+            "adr_home":{
+               "displayName":"ADR Home",
+               "value":"/opt/ORCLemaas/InfrastructureSoftware/oracledb/base"
+            }
+         }
+      }
+   ]
+}

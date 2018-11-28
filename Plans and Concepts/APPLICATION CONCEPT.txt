@@ -1,0 +1,50 @@
+LOB ROLES:
+_________________________________________________________________________________________________________
+accounting:
+- maintaining the general ledger
+- preparing a balance sheet
+- submitting financial reports: balance sheet, income statement, cash flow statement, statement of changes in equity
+- there is a channel where purchase orders are subitted after they are signed by the customer, when those orders are submitting, the information is broken down and written to a database within the account department where the information will be restructured as the various financial reports and submitted to the correct tables for respective reports
+_______
+finance: 
+- prepare monthly forcasting reports from financial reports provided by accounting
+- analyze the transactions in the general ledger: spend per customer, very high dollar transactions, transaction volume for each day
+- submit reports to domain within the financial department end of each month
+- take the information from the financial reporting submitted within the accounting department and use if to forecast new targets for the sales team, the forecast reporting will be created and written to a database with the forcasting information every end of month
+_______
+sales:
+- create transactions with customers
+- send customer invoices and purchase orders to operations team
+- send accepted ordering documents to accounts for reporting to financial reports
+- take monthly forcasted sales goals from finance department
+- submit reports at end of each month regarding sales attainment 
+- sales is given list of leads from the markting team, they then reach out to these customers and when they find sales, they send the details to the operations team who sends back a draft of an invoice, the salesperson gives the customer the invoice, the customer accepts or denys, if accepted, the acceptence is sent back to the operations team to draft a purchase order, when drafted, it is sent to the salesperson and then back to the customer, if denied, the invoice and order document cycle repeats, if accepted, then purchase order is signed by the customer and then operations send the order to accounting to be processed, if the original invoice is denied, amendments to the invoice are made and sent back.
+- for each month, the sales team will submit a report of their attainment to their numbers from finance's forcast, as well as the quality of the leads given from marketing
+
+_______
+operations:
+- maintain the lifecycle of deals with customers by collect, accepting, and disemminating purchase orders, invoices, etc
+- submit reports at end of month regarding average completion time of deal cycle and other summary statistics
+- when sales finds potential deals, the detials are sent to the operations department, and the invoice / order document loop is entered, when successfuly complted, the information is broken out into numbers for reporting and the documents are sent to accounting
+_______
+hr:
+- hiring of new employees
+- maintainance of employee roles in other business operations
+- submit reports with employee statistic, average turnaround, tenure, etc. 
+- HR maintains the employment heirarchy, for the purpose of this simulation, there is not management at this company but just LOB persons who carry out all these respective tasks. as "work" in each of these departments is generated, it is submitted to a pool for that given department where it is then distributed amongst available employees in that department. 
+- since HR can do hiring and firing, HR will simulate a randomized looping process for adding and removing talent from these various departments throughout operation
+- information regarding all related numbers from this is then use to create reports about employees at this business
+_______
+marketing: 
+- maintaining and creating list of customer contacts for sales to reach out to
+- presenting content for customers, customer with interest are flagged and passed as lead to sales
+- submit a report of effectiveness of advertisements 
+- a completely randomized pool of potential customers given random names, roles, and companies will be leveraged with the marketing department. 
+- this pool of customers will be run against a pretend advertising campaign that the markting team presents, the customers interest or opinion of that material will be randomly select to simulate customers finding interest, when this occurs, the information about these users is collected in a list and distributed to the sales team as leads at the begining of every month
+- the marking team submits each month regarding the success of that months advertising campaign (completely random), and the customers at the end of the month that responded to that months campaign favorably and presented as leads to the sales team the next month, etc
+_______
+SIMULATION FLOW:
+_________________________________________________________________________________________________________
+KEY: objects = [], functions = (), interfaces or entities = <>.
+
+[pool of customers] is run through a function representing (avertising impressions), a list of [interested customers] is the result of the function. the [interested customers] are packaged up into a list of [leads] before being submitted to the <sales portal>. when sales recieves the [leads], the sales people (prospect) the potential customers and generate a list of [customer opportunities]. each [customer opportunity] is broken down into [product configuration] and is then provided to the <operations portal> to begin the (finalization of the deal). the first step is the (creation of the invoice) which is passed back to the <sales portal> and (presented to the customer) who can either (approve) or (deny) the invoice and the decision is passed back to the <operations portal> to either (create a [purchase order]) or (amend the invoice) and pass the [amended invoice] back to the <sales portal>. if customer continues to (deny) the [amended invoice], the operations team will (amend the invoice) twice before the [customer opportunity] is (denied). if the invoice is (approved) within the limitations of two amendments, this will (create a [purchase order]) that will be sent from the operations team back to the <sales portal>. the customer will (sign) or (reject) the [purchase order]. if (signed), the [signed purchase order] will be sent back to the <operations portal> and the operations team will sent it to the <accounting portal> as a [transaction]. if the [purchase order] was (denied), the [purchase order] will be sent back to the <operations portal> where another [invoice] will be created and submitted back to the <sales portal>. the [number of amendments] will not reset with creation of a new [invoice] from a [rejected purchase order], instead, will be included and if the [number of amendments] on a [customer opportunity] is greater than two, the [customer opportunity] will be considered a [lost customer opportunity] and (discarded) after being (written to various reporting). 

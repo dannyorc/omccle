@@ -1,0 +1,23 @@
+{
+    "credentials" : [
+        {
+            "id" : "SQLCreds",
+            "name" : "SQLCreds",
+            "credType" : "DBCreds",
+            "properties" : [
+                {
+                    "name" : "DBUserName",
+                    "value" : "CLEAR[Your Database User Name]"
+                },
+                {
+                    "name" : "DBPassword",
+                    "value" : "CLEAR[Your Database Password]"
+                },
+                {
+                    "name" : "DBRole",
+                    "value" : "CLEAR[Normal]"
+                }
+            ]
+        }
+    ]
+}

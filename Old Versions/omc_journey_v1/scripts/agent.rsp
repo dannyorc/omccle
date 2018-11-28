@@ -1,0 +1,24 @@
+####################################################################################################
+# Refer Agent Installation Guide for details                                                       #
+#  http://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/management-cloud&id=deploy_agent       #
+# Refer this link for mandatory and non-mandatory parameter details                                #
+#  http://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/management-cloud&id=deploy_gateway     #
+####################################################################################################
+
+###################################### Registration Parameters #####################################
+
+TENANT_NAME=7efc6040a7164d09b0ab1690c86e7e5e
+
+AGENT_REGISTRATION_KEY=
+
+AGENT_BASE_DIRECTORY=
+
+##################################### Communication Parameters #####################################
+
+OMC_URL=
+
+GATEWAY_HOST=
+
+GATEWAY_PORT=
+
+ADDITIONAL_GATEWAYS=

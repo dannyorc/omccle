@@ -1,0 +1,27 @@
+{
+	"entities": [{
+		"name": "<Your Oracle Database Entity Name>",
+		"type": "omc_oracle_db",
+		"displayName": "<Your Oracle Database Entity Display Name>",
+		"timezoneRegion": "<Your Time Zone>",
+		"credentialRefs": ["SQLCreds"],
+		"properties": {
+			"host_name": {
+				"displayName": "host_name",
+				"value": "<Your Oracle Database Host>"
+			},
+			"port": {
+				"displayName": "port",
+				"value": "Your Oracle Database Port>"
+			},
+			"sid": {
+				"displayName": "sid",
+				"value": "Your Oracle Database SID>"
+			},
+			"capability": {
+				"displayName": "capability",
+				"value": "monitoring"
+			}
+		}
+	}]
+}
